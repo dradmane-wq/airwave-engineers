@@ -1,8 +1,5 @@
 
-/* =========================
-   AIRWAVE ENGINEERS WEBSITE
-   ========================= */
-
+/* GENERAL */
 :root {
     --primary: #0878c9;
     --dark: #0b1b2b;
@@ -20,7 +17,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 85px;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -49,10 +46,38 @@ a {
     padding: 90px 0;
 }
 
-/* NAVIGATION */
+.eyebrow {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
 
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 5px;
+    padding: 14px 23px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #055c9b;
+    transform: translateY(-2px);
+}
+
+/* NAVIGATION */
 header {
-    background: var(--white);
+    background: white;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -88,23 +113,23 @@ header {
 .logo-icon {
     display: grid;
     place-items: center;
-    background: var(--primary);
-    color: white;
     width: 43px;
     height: 43px;
     border-radius: 8px;
+    background: var(--primary);
+    color: white;
     font-size: 28px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 22px;
     list-style: none;
 }
 
 .nav-links a {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     transition: color 0.3s;
 }
@@ -114,34 +139,26 @@ header {
 }
 
 .nav-links .nav-button {
-    padding: 12px 20px;
     background: var(--primary);
     color: white;
+    padding: 11px 16px;
     border-radius: 5px;
 }
 
-/* HERO */
-
+/* HOME HERO */
 .hero {
     position: relative;
     min-height: 650px;
     display: flex;
     align-items: center;
     color: white;
-    background:
-        url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=2000&q=90")
-        center/cover no-repeat;
+    background: url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=2000&q=90") center/cover no-repeat;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(5, 20, 36, 0.96) 0%,
-        rgba(5, 20, 36, 0.82) 50%,
-        rgba(5, 20, 36, 0.25) 100%
-    );
+    background: linear-gradient(90deg, rgba(5,20,36,.96), rgba(5,20,36,.76), rgba(5,20,36,.25));
 }
 
 .hero-content {
@@ -149,14 +166,6 @@ header {
     z-index: 1;
     padding-top: 55px;
     padding-bottom: 55px;
-}
-
-.eyebrow {
-    color: var(--primary);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
 }
 
 .hero .eyebrow {
@@ -167,7 +176,6 @@ header {
     font-size: clamp(38px, 5.4vw, 65px);
     line-height: 1.12;
     margin-bottom: 24px;
-    max-width: 700px;
 }
 
 .hero h1 span {
@@ -187,29 +195,8 @@ header {
     flex-wrap: wrap;
 }
 
-.btn {
-    display: inline-block;
-    border: 0;
-    border-radius: 5px;
-    padding: 14px 23px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    color: white;
-    background: var(--primary);
-}
-
-.btn-primary:hover {
-    background: #055c9b;
-    transform: translateY(-2px);
-}
-
 .btn-outline {
-    border: 1px solid #ffffff;
+    border: 1px solid white;
     color: white;
 }
 
@@ -222,15 +209,14 @@ header {
     display: flex;
     gap: 55px;
     flex-wrap: wrap;
+    max-width: 720px;
     margin-top: 65px;
     padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    max-width: 720px;
+    border-top: 1px solid rgba(255,255,255,.3);
 }
 
 .hero-stats h3 {
     font-size: 18px;
-    color: white;
 }
 
 .hero-stats p {
@@ -239,7 +225,6 @@ header {
 }
 
 /* ABOUT */
-
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -260,10 +245,10 @@ header {
     position: absolute;
     left: 20px;
     bottom: 20px;
-    background: white;
     padding: 16px 22px;
+    background: white;
     border-left: 4px solid var(--primary);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
 }
 
 .image-label strong,
@@ -296,8 +281,8 @@ header {
 
 .check-list li {
     margin: 12px 0;
-    font-weight: 600;
     font-size: 14px;
+    font-weight: 600;
 }
 
 .check-list li::before {
@@ -310,11 +295,9 @@ header {
     border-radius: 50%;
     background: #e1f3ff;
     color: var(--primary);
-    font-weight: 800;
 }
 
 /* SECTION HEADINGS */
-
 .section-heading {
     text-align: center;
     max-width: 650px;
@@ -332,8 +315,9 @@ header {
 }
 
 /* SERVICES */
-
-.services {
+.services,
+.projects,
+.careers {
     background: var(--light);
 }
 
@@ -348,13 +332,12 @@ header {
     padding: 32px 27px;
     border: 1px solid var(--border);
     border-radius: 8px;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .service-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 15px 35px rgba(18, 62, 100, 0.1);
-    border-color: #b8ddf6;
+    box-shadow: 0 15px 35px rgba(18,62,100,.1);
 }
 
 .service-icon {
@@ -387,11 +370,6 @@ header {
 }
 
 /* WHY CHOOSE US */
-
-.why-us {
-    background: white;
-}
-
 .why-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -410,7 +388,6 @@ header {
 
 .benefit {
     display: flex;
-    align-items: flex-start;
     gap: 20px;
     padding: 22px;
     border: 1px solid var(--border);
@@ -433,11 +410,6 @@ header {
 }
 
 /* PROJECTS */
-
-.projects {
-    background: var(--light);
-}
-
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -448,12 +420,12 @@ header {
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 5px 20px rgba(0,0,0,.04);
 }
 
 .project-card img {
     height: 235px;
-    transition: transform 0.4s;
+    transition: transform .4s;
 }
 
 .project-card:hover img {
@@ -481,8 +453,129 @@ header {
     font-size: 14px;
 }
 
-/* CALL TO ACTION */
+/* CAREERS */
+.careers-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 35px;
+    margin-bottom: 45px;
+    background: linear-gradient(120deg, #0b1b2b, #0878c9);
+    border-radius: 10px;
+    color: white;
+}
 
+.careers-banner h3 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.careers-banner p {
+    color: #e1efff;
+    max-width: 650px;
+}
+
+.career-symbol {
+    font-size: 65px;
+    color: #7bd0ff;
+}
+
+.jobs-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.job-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    transition: .3s;
+}
+
+.job-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(11,27,43,.1);
+}
+
+.job-tag {
+    padding: 5px 10px;
+    background: #e7f4ff;
+    color: var(--primary);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.job-card h3 {
+    font-size: 21px;
+    margin: 18px 0 10px;
+}
+
+.job-card > p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.job-details {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: auto;
+    margin-bottom: 15px;
+    border-top: 1px solid var(--border);
+    color: var(--text);
+    font-size: 13px;
+}
+
+.job-card .btn {
+    margin-top: 5px;
+}
+
+.career-note {
+    text-align: center;
+    background: white;
+    padding: 35px 20px;
+    margin-top: 40px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+}
+
+.career-note h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.career-note p {
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.career-email {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.career-email:hover {
+    text-decoration: underline;
+}
+
+/* CALL TO ACTION */
 .cta {
     background: linear-gradient(110deg, #0769ae, #0b2440);
     padding: 55px 0;
@@ -521,10 +614,9 @@ header {
 }
 
 /* CONTACT */
-
 .contact-grid {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: .8fr 1.2fr;
     gap: 55px;
 }
 
@@ -617,7 +709,6 @@ header {
 }
 
 /* FOOTER */
-
 .footer {
     background: #081727;
     color: white;
@@ -672,8 +763,7 @@ header {
 }
 
 /* RESPONSIVE DESIGN */
-
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .navbar {
         flex-direction: column;
         padding-top: 18px;
@@ -683,12 +773,7 @@ header {
     .nav-links {
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px 22px;
-    }
-
-    .service-grid,
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 20px;
     }
 
     .about-grid,
@@ -701,13 +786,21 @@ header {
     }
 }
 
+@media (max-width: 900px) {
+    .service-grid,
+    .project-grid,
+    .jobs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 600px) {
     .section {
         padding: 60px 0;
     }
 
     .nav-links {
-        gap: 12px 16px;
+        gap: 12px 15px;
     }
 
     .nav-links a {
@@ -746,12 +839,29 @@ header {
     }
 
     .service-grid,
-    .project-grid {
+    .project-grid,
+    .jobs-grid {
         grid-template-columns: 1fr;
     }
 
     .project-card img {
         height: 220px;
+    }
+
+    .careers-banner {
+        padding: 25px;
+    }
+
+    .careers-banner h3 {
+        font-size: 23px;
+    }
+
+    .career-symbol {
+        font-size: 40px;
+    }
+
+    .jobs-title {
+        font-size: 21px;
     }
 
     .cta-content {
